@@ -20,9 +20,12 @@ public class Movement : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
 
         Vector3 movement = new Vector3();
-        movement.x = h * speed * Time.deltaTime;
-        movement.z = v * speed * Time.deltaTime;
-
+        movement.x = h * speed;
+        movement.z = v * speed;
+        
         player.SimpleMove(movement);
+       // transform.Rotate(Vector3.up * v);
+       // transform.Rotate(Vector3.up * h);
     }
+
 }
